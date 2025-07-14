@@ -1,0 +1,49 @@
+.section {
+  margin-bottom: var(--spacing-xl);
+}
+
+.sectionTitle {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: var(--border-thin) solid var(--color-border);
+  color: var(--color-text);
+}
+
+.abilities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.ability {
+  background-color: var(--color-buttonBackground);
+  border-radius: var(--border-radius-full);
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: var(--font-size-sm);
+  text-transform: capitalize;
+  color: var(--color-text);
+}
+
+.skeletonAbility {
+  width: var(--size-gridItemSmall);
+  height: calc(var(--font-size-sm) + var(--spacing-md) * 2);
+  background: linear-gradient(
+    90deg,
+    rgba(var(--color-skeletonBackground-rgb), var(--opacity-light)) var(--percent-quarter),
+    rgba(var(--color-skeletonBackground-rgb), var(--opacity-high)) var(--percent-half),
+    rgba(var(--color-skeletonBackground-rgb), var(--opacity-light)) var(--percent-threeQuarters)
+  );
+  background-size: var(--percent-double) var(--percent-full);
+  animation: shimmer var(--animation-duration-normal) infinite;
+  border-radius: var(--border-radius-full);
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: var(--percent-double) 0;
+  }
+  100% {
+    background-position: calc(-1 * var(--percent-double)) 0;
+  }
+} 

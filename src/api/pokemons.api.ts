@@ -1,7 +1,8 @@
 import axios from 'axios';
+import { API } from '../utils/constants';
 
 const api = axios.create({
-  baseURL: 'https://pokeapi.co/api/v2',
+  baseURL: API.BASE_URL,
 });
 
 /**
@@ -9,18 +10,9 @@ const api = axios.create({
    * @param offset how many records to skip
    * @param limit how many records to return
    * @returns list of pokemons
-   * 
-   * @url https://pokeapi.co/docs/v2#resource-listspagination-section
    */
-export const getList = (offset = 20, limit = 20) =>
+export const getList = (offset = 0, limit = API.ITEMS_PER_PAGE) =>
   api.get(`/pokemon?offset=${offset}&limit=${limit}`);
 
-/**
- * Fetch a single pokemon from API
- * @param id id or name of the pokemon
- * @returns pokemon
- * 
- * @url https://pokeapi.co/docs/v2#pokemon
- */
 export const getOne = (id: number | string) =>
   api.get(`/pokemon/${id}`);

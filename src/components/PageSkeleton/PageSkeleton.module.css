@@ -1,0 +1,280 @@
+.container {
+  max-width: var(--container-lg);
+  margin: 0 auto;
+  padding: var(--spacing-xl) var(--spacing-md);
+  width: var(--percent-full);
+}
+
+.header {
+  margin-bottom: var(--spacing-xl);
+  text-align: center;
+}
+
+.skeletonTitle {
+  height: var(--font-size-4xl);
+  width: var(--percent-half);
+  margin: 0 auto var(--spacing-md);
+  background: linear-gradient(
+    90deg,
+    rgba(var(--color-skeletonBackground-rgb), var(--opacity-light)) var(--percent-quarter),
+    rgba(var(--color-skeletonBackground-rgb), var(--opacity-high)) var(--percent-half),
+    rgba(var(--color-skeletonBackground-rgb), var(--opacity-light)) var(--percent-threeQuarters)
+  );
+  background-size: var(--percent-double) var(--percent-full);
+  animation: shimmer var(--animation-duration-normal) infinite;
+  border-radius: var(--border-radius-sm);
+}
+
+.skeletonSubtitle {
+  height: var(--font-size-lg);
+  width: var(--percent-threeQuarters);
+  margin: 0 auto;
+  background: linear-gradient(
+    90deg,
+    rgba(var(--color-skeletonBackground-rgb), var(--opacity-light)) var(--percent-quarter),
+    rgba(var(--color-skeletonBackground-rgb), var(--opacity-high)) var(--percent-half),
+    rgba(var(--color-skeletonBackground-rgb), var(--opacity-light)) var(--percent-threeQuarters)
+  );
+  background-size: var(--percent-double) var(--percent-full);
+  animation: shimmer var(--animation-duration-normal) infinite;
+  border-radius: var(--border-radius-sm);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--size-gridItemLarge), 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-xl);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-cardBackground);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  height: var(--percent-full);
+}
+
+.skeletonImage {
+  width: var(--percent-full);
+  height: var(--size-gridItemLarge);
+  background: linear-gradient(
+    90deg,
+    rgba(var(--color-skeletonBackground-rgb), var(--opacity-light)) var(--percent-quarter),
+    rgba(var(--color-skeletonBackground-rgb), var(--opacity-high)) var(--percent-half),
+    rgba(var(--color-skeletonBackground-rgb), var(--opacity-light)) var(--percent-threeQuarters)
+  );
+  background-size: var(--percent-double) var(--percent-full);
+  animation: shimmer var(--animation-duration-normal) infinite;
+}
+
+.content {
+  padding: var(--spacing-md);
+}
+
+.skeletonName {
+  height: var(--font-size-xl);
+  width: var(--percent-threeQuarters);
+  margin-bottom: var(--spacing-sm);
+  background: linear-gradient(
+    90deg,
+    rgba(var(--color-skeletonBackground-rgb), var(--opacity-light)) var(--percent-quarter),
+    rgba(var(--color-skeletonBackground-rgb), var(--opacity-high)) var(--percent-half),
+    rgba(var(--color-skeletonBackground-rgb), var(--opacity-light)) var(--percent-threeQuarters)
+  );
+  background-size: var(--percent-double) var(--percent-full);
+  animation: shimmer var(--animation-duration-normal) infinite;
+  border-radius: var(--border-radius-sm);
+}
+
+.skeletonId {
+  height: var(--font-size-sm);
+  width: var(--percent-half);
+  background: linear-gradient(
+    90deg,
+    rgba(var(--color-skeletonBackground-rgb), var(--opacity-light)) var(--percent-quarter),
+    rgba(var(--color-skeletonBackground-rgb), var(--opacity-high)) var(--percent-half),
+    rgba(var(--color-skeletonBackground-rgb), var(--opacity-light)) var(--percent-threeQuarters)
+  );
+  background-size: var(--percent-double) var(--percent-full);
+  animation: shimmer var(--animation-duration-normal) infinite;
+  border-radius: var(--border-radius-sm);
+}
+
+.backButtonSkeleton {
+  width: var(--size-backButtonWidth);
+  height: var(--font-size-base);
+  margin: 0 0 var(--spacing-xl) 0;
+  border-radius: var(--border-radius-md);
+}
+
+.detailCard {
+  max-width: var(--container-lg);
+  margin: 0 auto;
+  box-shadow: var(--shadow-lg);
+}
+
+.detailImage {
+  height: var(--size-pokemonImageSize);
+  background-color: var(--color-skeletonBackground);
+}
+
+.detailContent {
+  padding: var(--spacing-xl);
+}
+
+.detailName {
+  height: var(--font-size-3xl);
+  margin: 0 auto var(--spacing-sm);
+  width: var(--size-detailNameWidth);
+  text-align: center;
+}
+
+.detailId {
+  height: var(--font-size-lg);
+  margin: 0 auto var(--spacing-md);
+  width: var(--size-detailIdWidth);
+  text-align: center;
+}
+
+.typesContainer {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-xl);
+}
+
+.typeChip {
+  height: calc(var(--font-size-sm) + var(--spacing-sm) * 2);
+  width: var(--size-gridItemSmall);
+  border-radius: var(--border-radius-full);
+}
+
+.sectionContainer {
+  margin-bottom: var(--spacing-xl);
+  position: relative;
+}
+
+.sectionContainer::after {
+  content: "";
+  display: block;
+  width: var(--percent-full);
+  height: var(--border-thin);
+  background-color: var(--color-border);
+  position: absolute;
+  bottom: calc(-1 * var(--spacing-md));
+  left: 0;
+}
+
+.sectionItem {
+  height: var(--font-size-lg);
+  width: var(--percent-full);
+  margin-bottom: var(--spacing-md);
+  border-radius: var(--border-radius-sm);
+}
+
+.sectionTitle {
+  width: var(--size-sectionTitleWidth);
+  margin-bottom: var(--spacing-lg);
+}
+
+.physicalInfoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--size-gridItemSmall), 1fr));
+  gap: var(--spacing-md);
+}
+
+.physicalInfoItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-skeletonBackground);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-md);
+}
+
+.physicalInfoLabel {
+  width: var(--percent-detailNameWidth);
+  margin-bottom: var(--spacing-xs);
+}
+
+.physicalInfoValue {
+  width: var(--percent-half);
+  height: var(--font-size-lg);
+}
+
+.abilitiesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.abilityChip {
+  height: calc(var(--font-size-sm) + var(--spacing-md) * 2);
+  width: var(--size-gridItemSmall);
+  border-radius: var(--border-radius-full);
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--size-gridItemMedium), 1fr));
+  gap: var(--spacing-md);
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.statName {
+  margin-bottom: var(--spacing-xs);
+  height: var(--font-size-sm);
+}
+
+.statValue {
+  height: var(--font-size-lg);
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: var(--percent-double) 0;
+  }
+  100% {
+    background-position: calc(-1 * var(--percent-double)) 0;
+  }
+}
+
+@media (max-width: var(--breakpoint-md)) {
+  .container {
+    padding: var(--spacing-md);
+  }
+  
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(var(--size-gridItemMedium), 1fr));
+    gap: var(--spacing-md);
+  }
+  
+  .detailImage {
+    height: calc(var(--size-pokemonImageSize) * 0.8);
+  }
+  
+  .detailContent {
+    padding: var(--spacing-lg);
+  }
+}
+
+@media (max-width: var(--breakpoint-sm)) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .detailImage {
+    height: calc(var(--size-pokemonImageSize) * 0.6);
+  }
+  
+  .detailContent {
+    padding: var(--spacing-md);
+  }
+} 

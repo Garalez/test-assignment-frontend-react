@@ -1,0 +1,66 @@
+
+.skeletonCard {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-cardBackground);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  height: var(--size-pokemonCardHeight);
+  transition: var(--transition-duration-normal) var(--transition-timing-easeInOut);
+}
+
+.skeletonImage {
+  width: var(--percent-full);
+  height: var(--size-gridItemLarge);
+  background: linear-gradient(
+    90deg,
+    rgba(var(--color-skeletonBackground-rgb), var(--opacity-light)) var(--percent-quarter),
+    rgba(var(--color-skeletonBackground-rgb), var(--opacity-high)) var(--percent-half),
+    rgba(var(--color-skeletonBackground-rgb), var(--opacity-light)) var(--percent-threeQuarters)
+  );
+  background-size: var(--percent-double) var(--percent-full);
+  animation: shimmer var(--animation-duration-normal) infinite;
+}
+
+.skeletonContent {
+  padding: var(--spacing-md);
+}
+
+.skeletonName {
+  height: var(--font-size-xl);
+  width: var(--percent-threeQuarters);
+  margin-bottom: var(--spacing-sm);
+  background: linear-gradient(
+    90deg,
+    rgba(var(--color-skeletonBackground-rgb), var(--opacity-light)) var(--percent-quarter),
+    rgba(var(--color-skeletonBackground-rgb), var(--opacity-high)) var(--percent-half),
+    rgba(var(--color-skeletonBackground-rgb), var(--opacity-light)) var(--percent-threeQuarters)
+  );
+  background-size: var(--percent-double) var(--percent-full);
+  animation: shimmer var(--animation-duration-normal) infinite;
+  border-radius: var(--border-radius-sm);
+}
+
+.skeletonId {
+  height: var(--font-size-sm);
+  width: var(--percent-half);
+  background: linear-gradient(
+    90deg,
+    rgba(var(--color-skeletonBackground-rgb), var(--opacity-light)) var(--percent-quarter),
+    rgba(var(--color-skeletonBackground-rgb), var(--opacity-high)) var(--percent-half),
+    rgba(var(--color-skeletonBackground-rgb), var(--opacity-light)) var(--percent-threeQuarters)
+  );
+  background-size: var(--percent-double) var(--percent-full);
+  animation: shimmer var(--animation-duration-normal) infinite;
+  border-radius: var(--border-radius-sm);
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: var(--percent-double) 0;
+  }
+  100% {
+    background-position: calc(-1 * var(--percent-double)) 0;
+  }
+} 
