@@ -1,0 +1,115 @@
+.header {
+  padding: var(--spacing-xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-skeletonBackground);
+}
+
+.imageContainer {
+  width: var(--size-pokemonImageSize);
+  height: var(--size-pokemonImageSize);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+  position: relative;
+}
+
+.image {
+  width: var(--percent-full);
+  height: var(--percent-full);
+  object-fit: contain;
+  position: relative;
+  z-index: var(--z-index-base);
+}
+
+.hidden {
+  opacity: var(--opacity-none);
+}
+
+.name {
+  font-size: var(--font-size-3xl);
+  margin-bottom: var(--spacing-sm);
+  text-transform: capitalize;
+  text-align: center;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.id {
+  font-size: var(--font-size-lg);
+  color: var(--color-textSecondary);
+  margin-bottom: var(--spacing-md);
+  text-decoration: none;
+}
+
+.types {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+}
+
+.type {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  text-transform: capitalize;
+}
+
+.skeletonText {
+  width: var(--percent-full);
+  background: linear-gradient(
+    90deg,
+    rgba(var(--color-skeletonBackground-rgb), var(--opacity-light)) var(--percent-quarter),
+    rgba(var(--color-skeletonBackground-rgb), var(--opacity-high)) var(--percent-half),
+    rgba(var(--color-skeletonBackground-rgb), var(--opacity-light)) var(--percent-threeQuarters)
+  );
+  background-size: var(--percent-double) var(--percent-full);
+  animation: shimmer var(--animation-duration-normal) infinite;
+  border-radius: var(--border-radius-sm);
+}
+
+.skeletonType {
+  width: var(--size-gridItemSmall);
+  height: calc(var(--font-size-sm) + var(--spacing-sm) * 2);
+  background: linear-gradient(
+    90deg,
+    rgba(var(--color-skeletonBackground-rgb), var(--opacity-light)) var(--percent-quarter),
+    rgba(var(--color-skeletonBackground-rgb), var(--opacity-high)) var(--percent-half),
+    rgba(var(--color-skeletonBackground-rgb), var(--opacity-light)) var(--percent-threeQuarters)
+  );
+  background-size: var(--percent-double) var(--percent-full);
+  animation: shimmer var(--animation-duration-normal) infinite;
+  border-radius: var(--border-radius-full);
+}
+
+/* Pokemon type colors */
+.normal { background-color: var(--pokemon-type-normal); color: var(--color-white); }
+.fire { background-color: var(--pokemon-type-fire); color: var(--color-white); }
+.water { background-color: var(--pokemon-type-water); color: var(--color-white); }
+.grass { background-color: var(--pokemon-type-grass); color: var(--color-white); }
+.electric { background-color: var(--pokemon-type-electric); color: var(--color-black); }
+.ice { background-color: var(--pokemon-type-ice); color: var(--color-black); }
+.fighting { background-color: var(--pokemon-type-fighting); color: var(--color-white); }
+.poison { background-color: var(--pokemon-type-poison); color: var(--color-white); }
+.ground { background-color: var(--pokemon-type-ground); color: var(--color-black); }
+.flying { background-color: var(--pokemon-type-flying); color: var(--color-white); }
+.psychic { background-color: var(--pokemon-type-psychic); color: var(--color-white); }
+.bug { background-color: var(--pokemon-type-bug); color: var(--color-white); }
+.rock { background-color: var(--pokemon-type-rock); color: var(--color-white); }
+.ghost { background-color: var(--pokemon-type-ghost); color: var(--color-white); }
+.dark { background-color: var(--pokemon-type-dark); color: var(--color-white); }
+.dragon { background-color: var(--pokemon-type-dragon); color: var(--color-white); }
+.steel { background-color: var(--pokemon-type-steel); color: var(--color-black); }
+.fairy { background-color: var(--pokemon-type-fairy); color: var(--color-black); }
+
+@keyframes shimmer {
+  0% {
+    background-position: var(--percent-double) 0;
+  }
+  100% {
+    background-position: calc(-1 * var(--percent-double)) 0;
+  }
+} 
